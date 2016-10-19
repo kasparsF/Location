@@ -149,8 +149,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (mLastLocation != null) {
             double latitude = mLastLocation.getLatitude();
             double longitude = mLastLocation.getLongitude();
+           double accuracy = mLastLocation.getAccuracy();
 
-            lblLocation.setText(latitude + ", " + longitude);
+
+            lblLocation.setText(latitude + ", " + longitude + ", " + accuracy);
 
         } else {
 
